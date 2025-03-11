@@ -1,0 +1,22 @@
+.profile-list {
+    text-align: left;
+  }
+  
+  .product-list ul {
+    margin: 0;
+    
+  }
+  
+  .product-list ul li {
+    display: inline-block;
+    border: 1px, solid skyblue;
+    padding: 5px;
+    width: 225px;
+  }
+
+  .profile-information-list{
+    display: inline-block;
+    border: 1px, solid skyblue;
+    padding: 5px;
+    width: 225px;
+  }

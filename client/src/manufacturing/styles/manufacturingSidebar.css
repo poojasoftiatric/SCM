@@ -1,0 +1,312 @@
+/* Google Font Import - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+  
+/* Sidebar closed state: Show text below the icon */
+.manufacturing-sidebar.close .manufacturing-icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 60px;
+    background-color: var(--sidebar-color);
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.manufacturing-sidebar.close .manufacturing-icon-container .manufacturing-icon {
+    font-size: 24px;
+    margin-bottom: 4px;
+    line-height: 1;
+}
+
+.manufacturing-sidebar.close .manufacturing-icon-container::after {
+    content: attr(data-text);
+    font-size: 10px;
+    color: var(--text-color);
+    margin-top: 5px;
+    text-align: center;
+}
+
+.manufacturing-sidebar.close .manufacturing-nav-text {
+    display: none;
+}
+
+.manufacturing-sidebar .manufacturing-nav-text {
+    display: inline-block;
+}
+
+:root{
+    --body-color: #ffffff;
+    --sidebar-color: #dde1e7;
+    --primary-color: #695CFE;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #707070;
+    --tran-03: all 0.2s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+
+.manufacturing-body {
+    min-height: 100vh;
+    background-color: var(--body-color);
+    transition: var(--tran-05);
+}
+
+::selection {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.manufacturing-body.dark {
+    --body-color: #18191a;
+    --sidebar-color: #242526;
+    --primary-color: #3a3b3c;
+    --primary-color-light: #3a3b3c;
+    --toggle-color: #fff;
+    --text-color: #ccc;
+}
+
+/* Sidebar */
+.manufacturing-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background: var(--sidebar-color);
+    transition: var(--tran-05);
+    z-index: 100;  
+}
+
+.manufacturing-sidebar.close {
+    width: 92px;
+    flex: 0 0 88px;
+}
+
+/* Reusable code */
+.manufacturing-sidebar li {
+    height: 60px;
+    margin: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(43, 149, 255, 0.8), 0 0 10px rgba(39, 255, 104, 0.6), 0 0 10px 5px rgba(222, 36, 232, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(145, 248, 85, 0.8), 0 0 15px rgba(59, 214, 245, 0.6), 0 0 20px 10px rgba(253, 25, 143, 0.4);
+    }
+}
+
+.manufacturing-sidebar header .manufacturing-image,
+.manufacturing-sidebar .manufacturing-icon {
+    min-width: 60px;
+    border-radius: 6px;
+}
+
+.manufacturing-sidebar .manufacturing-icon {
+    min-width: 40px;
+    border-radius: 6px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.manufacturing-sidebar .manufacturing-text,
+.manufacturing-sidebar .manufacturing-icon {
+    color: var(--text-color);
+    transition: var(--tran-03);
+}
+
+.manufacturing-sidebar .manufacturing-text {
+    font-size: 17px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.manufacturing-sidebar.close .manufacturing-text {
+    opacity: 0;
+}
+
+/* Sidebar header */
+.manufacturing-sidebar header {
+    position: relative;
+    height: 60px;
+}
+
+.manufacturing-sidebar header .manufacturing-image-text {
+    display: flex;
+    align-items: center;
+}
+
+.manufacturing-sidebar header .manufacturing-logo-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+header .manufacturing-image-text .manufacturing-name {
+    margin-top: 2px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+header .manufacturing-image-text .manufacturing-profession {
+    font-size: 16px;
+    margin-top: -2px;
+    display: block;
+}
+
+.manufacturing-sidebar header .manufacturing-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.manufacturing-sidebar header .manufacturing-image img {
+    width: 60px;
+    border-radius: 6px;
+    margin-left: 32px;
+    margin-block: 5px;
+}
+
+.manufacturing-sidebar header .manufacturing-toggle {
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%) rotate(180deg);
+    height: 25px;
+    width: 25px;
+    background-color: rgb(24, 159, 24);
+    color: var(--sidebar-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+    transition: var(--tran-05);
+}
+
+.manufacturing-body.dark .manufacturing-sidebar header .manufacturing-toggle {
+    color: var(--text-color);
+}
+
+.manufacturing-sidebar.close .manufacturing-toggle {
+    transform: translateY(-50%) rotate(0deg);
+}
+
+.manufacturing-sidebar .manufacturing-menu {
+    margin-top: 20px;
+}
+
+/* Navigation links */
+.manufacturing-sidebar li a {
+    list-style: none;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: var(--tran-03);
+}
+
+.manufacturing-sidebar li a:hover {
+    background: #38c2fe;
+    box-shadow: 0 0 5px  #55c9fb,
+                0 0 15px  #88d7f9,
+                0 0 30px  #abe6ff,
+                0 0 60px  #b6e9ff;
+}
+
+.manufacturing-sidebar li a:hover .manufacturing-icon,
+.manufacturing-sidebar li a:hover .manufacturing-nav-text {
+    color: black;
+}
+
+.manufacturing-body.dark .manufacturing-sidebar li a:hover .manufacturing-icon,
+.manufacturing-body.dark .manufacturing-sidebar li a:hover .manufacturing-nav-text {
+    color: var(--text-color);
+}
+
+.manufacturing-sidebar .manufacturing-menu-bar {
+    height: calc(100% - 55px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow-y: scroll;
+}
+
+.manufacturing-menu-bar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Home section styling */
+.manufacturing-home {
+    position: absolute;
+    top: 0;
+    left: 250px;
+    height: 100vh;
+    width: calc(100% - 250px);
+    background-color: var(--body-color);
+    transition: var(--tran-05);
+}
+
+.manufacturing-home .text {
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--text-color);
+    padding: 12px 60px;
+}
+
+.manufacturing-sidebar.close ~ .manufacturing-home {
+    left: 92px;
+    height: 100vh;
+    width: calc(100% - 92px);
+}
+
+.manufacturing-body.dark .manufacturing-home .text {
+    color: var(--text-color);
+}
+
+
+.manufacturing-home {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Make the manufacturing-content section expand to take up available space */
+.manufacturing-content {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 10px; /* Add padding if needed */
+    background-color: #f9f9f9;
+}
+
+/* Ensure the footer sticks to the bottom */
+.manufacturing-footer {
+    background-color: var(--sidebar-color); /* Customize as needed */
+    text-align: center;
+    padding: 10px 0;
+    /* Any other footer styles */
+}

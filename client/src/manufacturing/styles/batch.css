@@ -1,0 +1,89 @@
+.batch-form-container {
+   
+    background: white;
+    text-align: center;
+  }
+  
+  .head2batch {
+    margin-bottom: 15px;
+  }
+
+  .gap-batch{
+   padding: 20px;
+  }
+  
+  .batch-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:10px;
+    margin-bottom: 15px;
+  }
+  
+  .batch-label {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .required {
+    color: red;
+  }
+  
+  .batch-input {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .button-batch-group {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  
+  .batch-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .add-btn {
+    background-color:#800080;
+    color: white;
+    width: 91%;
+    margin-bottom: 5px;
+  }
+  
+  .reset-btn {
+    background-color: #ccc;
+    color: rgb(0, 0, 0);
+    width: 91%;
+  }
+  .batch-block {
+    display: flex;
+    width: 100%;
+    padding: 6px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tost-remake{
+  position: fixed !important;
+  top: 20px !important;  /* Keeps it at the top */
+  right: 20px !important; /* Always stays in the right corner */
+  z-index: 9999 !important; /* Ensures it's above other elements */
+  width: auto !important; /* Adjusts to content size */
+  max-width: 300px; /* Prevents it from being too wide */
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .Toastify__toast-container {
+    right: 10px !important; /* Adjusts for smaller screens */
+    top: 10px !important; /* Moves slightly for better visibility */
+  }
+}

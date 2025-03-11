@@ -1,0 +1,22 @@
+/* popupMenu.css */
+.popup-menu {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-link {
+    color: #333;
+    padding: 5px 10px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.popup-link:hover {
+    background-color: #f0f0f0;
+}
